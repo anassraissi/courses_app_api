@@ -1,3 +1,4 @@
+import React from 'react'
 import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa';
 import Link from 'next/link'
 async function GetRepos(){
@@ -12,8 +13,7 @@ async function GetRepos(){
     //await 1 seconde for spinner to show
     return repos;
 
-}
-import React from 'react'
+  }
 
 const page = async () => {
     const repos=await GetRepos();

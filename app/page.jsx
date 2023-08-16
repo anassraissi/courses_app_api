@@ -2,23 +2,12 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link'
 import Header from './Components/Header'
-
-
+import Courses from './Components/courses'
 export default function Home() {
   return (
     <div>
-          <h1>Home Page</h1>
-    <ul>
-    <li>
-      <Link href="/">Home</Link>
-    </li>
-    <li>
-      <Link href="./About">About</Link>
-    </li>
-    <li>
-      <Link href="./About/Team">Team</Link>
-    </li>
-    </ul>
+         <h1>Wellcome to Anass's media</h1>
+         <Courses></Courses>
     </div>
 
   )
