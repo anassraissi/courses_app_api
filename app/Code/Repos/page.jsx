@@ -2,7 +2,11 @@ import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa';
 import Link from 'next/link'
 async function GetRepos(){
 
-    const response=await fetch('https://api.github.com/users/AnassRaissi/repos');
+    const response=await fetch('https://api.github.com/users/AnassRaissi/repos',{
+      next:{
+          validate:60,
+      }
+    });
     const repos=await response.json();
     await new Promise((resolve)=> setTimeout(resolve,1000))
     //await 1 seconde for spinner to show
@@ -14,7 +18,7 @@ import React from 'react'
 const page = async () => {
     const repos=await GetRepos();
   return (
-    <div className='repos-container'>
+    <div className='repos-container'> 
     <h2>Repositories</h2>
     <ul className='repo-list'>
       {repos.map((repo) => (
